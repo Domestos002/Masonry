@@ -1,11 +1,61 @@
-@import "buttons"
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
-body
-  background: #eee
-  color: #000
+.w100
+    width: 100% !important
+    height: 100% !important
 
-h1
-  font-weight: normal
+=trans($trans: all 0.3s ease 0s)
+    transition: $trans
+    -moz-transition: $trans
+    -webkit-transition: $trans
+    -o-transition: $trans
+    -ms-transition: $trans
 
-p
-  background: #ccc
+.b-dashed
+    border: 1px dashed grey
+
+.hidden
+    display: none
+
+
+.item-def
+    position: absolute
+    border: 2px solid #333
+    margin: 2px
+    width: 200px
+    height: 20%
+    background-color: #2296DD
+    vertical-align: middle
+
+.download_btn
+    background-color: red
+    line-height: 55px
+    cursor: pointer
+    color: #fff
+    text-decoration: none
+    padding: 0 200px
+    position: absolute
+    top: 0
+    right: 0
+
+
+.p-rel
+    position: relative
+
+.masonry
+    min-width: 100vh
+    height: 100vh
+    position: relative
+    text-align: justify
+    &:after
+        width: 100%
+        height: 0
+        text-align: left
+        vertical-align: middle
+        overflow: hidden
+        visibility: hidden
+        content: ""
+        display: inline-block

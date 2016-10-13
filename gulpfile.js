@@ -150,6 +150,8 @@ gulp.task('watch', function () {
     gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
     gulp.watch(sources.twig.watch, ["twig"]);
+
+    gulp.watch('./app/js/*.js').on('change', connect.reload());
 });
 
 gulp.task('default', ['connect', 'twig', 'compass', 'watch']);
